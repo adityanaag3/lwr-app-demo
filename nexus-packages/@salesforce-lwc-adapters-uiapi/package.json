@@ -1,0 +1,32 @@
+{
+    "name": "@salesforce/lwc-adapters-uiapi",
+    "version": "1.13.0",
+    "description": "UIAPI adapters with LWC bindings",
+    "license": "MIT",
+    "module": "dist/main.js",
+    "types": "dist/src/main.d.ts",
+    "files": [
+        "dist"
+    ],
+    "lwc": {
+        "modules": [
+            {
+                "name": "force/ldsAdaptersUiapi",
+                "path": "dist/main.js"
+            }
+        ],
+        "expose": [
+            "force/ldsAdaptersUiapi"
+        ]
+    },
+    "scripts": {
+        "build": "node ./scripts/generate.js && rollup --config rollup.config.js",
+        "clean": "rm -rf dist src/generated"
+    },
+    "devDependencies": {
+        "@luvio/engine": "0.33.0"
+    },
+    "dependencies": {
+        "@luvio/lwc-luvio": "0.33.0"
+    }
+}

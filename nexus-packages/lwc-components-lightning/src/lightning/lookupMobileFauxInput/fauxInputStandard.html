@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-faux-input_container" onclick={preventClickOutsideButton}>
+        <span class={computedLabelClass}
+            id="slds-faux-input-label"
+            onclick={focus}>
+            <template if:true={required}>
+                <abbr class="slds-required" title={requiredLabel}>*</abbr>
+            </template>
+            {label}
+        </span>
+
+        <template if:true={fieldLevelHelp}>
+            <lightning-helptext id="field-help" class={computedFieldLevelHelpClass} content={fieldLevelHelp}></lightning-helptext>
+        </template>
+
+        <button class="slds-faux-input" aria-labelledby="slds-faux-input-label">
+            <lightning-icon
+                class="slds-input__icon slds-input__icon_right"
+                icon-name="utility:search"
+                size="x-small"
+            ></lightning-icon>
+        </button>
+    </div>
+    <template if:true={errorMessage}>
+        <div id="error-message" class="slds-form-element__help" data-help-message role="alert">{errorMessage}</div>
+    </template>
+</template>

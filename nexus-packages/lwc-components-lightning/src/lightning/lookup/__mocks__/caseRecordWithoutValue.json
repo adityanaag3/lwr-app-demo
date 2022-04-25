@@ -1,0 +1,227 @@
+{
+    "apiName": "Case",
+    "childRelationships": {},
+    "id": "500xx000000bnxBAAQ",
+    "lastModifiedById": "005xx000001X7gzAAC",
+    "lastModifiedDate": "2020-06-08T12:27:58.000Z",
+    "recordTypeId": "012000000000000AAA",
+    "recordTypeInfo": null,
+    "systemModstamp": "2020-06-08T12:27:58.000Z",
+    "fields": {
+        "Account": {
+            "displayValue": "Zenith Bonjour",
+            "value": {
+                "apiName": "Account",
+                "childRelationships": {},
+                "id": "001xx000003GYsNAAW",
+                "lastModifiedById": "005xx000001X7gzAAC",
+                "lastModifiedDate": "2020-06-03T15:06:30.000Z",
+                "recordTypeId": "012000000000000AAA",
+                "recordTypeInfo": null,
+                "systemModstamp": "2020-06-03T15:06:30.000Z",
+                "fields": {
+                    "Id": {
+                        "displayValue": null,
+                        "value": "001xx000003GYsNAAW"
+                    },
+                    "Name": {
+                        "displayValue": null,
+                        "value": "Zenith Bonjour"
+                    }
+                }
+            }
+        },
+        "AccountId": {
+            "displayValue": null,
+            "value": "001xx000003GYsNAAW"
+        },
+        "CaseNumber": {
+            "displayValue": null,
+            "value": "00001003"
+        },
+        "ClosedDate": {
+            "displayValue": null,
+            "value": null
+        },
+        "Comments": {
+            "displayValue": null,
+            "value": null
+        },
+        "Contact": {
+            "displayValue": "Isis De Céphalonie",
+            "value": {
+                "apiName": "Contact",
+                "childRelationships": {},
+                "id": "003xx000004WhY4AAK",
+                "lastModifiedById": "005xx000001X7gzAAC",
+                "lastModifiedDate": "2020-06-03T15:08:27.000Z",
+                "recordTypeId": "012000000000000AAA",
+                "recordTypeInfo": null,
+                "systemModstamp": "2020-06-03T15:08:27.000Z",
+                "fields": {
+                    "Id": {
+                        "displayValue": null,
+                        "value": "003xx000004WhY4AAK"
+                    },
+                    "Name": {
+                        "displayValue": null,
+                        "value": "Isis De Céphalonie"
+                    }
+                }
+            }
+        },
+        "ContactEmail": {
+            "displayValue": null,
+            "value": null
+        },
+        "ContactId": {
+            "displayValue": null,
+            "value": "003xx000004WhY4AAK"
+        },
+        "ContactPhone": {
+            "displayValue": null,
+            "value": null
+        },
+        "CreatedBy": {
+            "displayValue": "Admin User",
+            "value": {
+                "apiName": "User",
+                "childRelationships": {},
+                "id": "005xx000001X7gzAAC",
+                "lastModifiedById": "005xx000001X7gzAAC",
+                "lastModifiedDate": "2020-06-03T10:44:27.000Z",
+                "recordTypeId": null,
+                "recordTypeInfo": null,
+                "systemModstamp": "2020-06-03T14:04:15.000Z",
+                "fields": {
+                    "Id": {
+                        "displayValue": null,
+                        "value": "005xx000001X7gzAAC"
+                    },
+                    "Name": {
+                        "displayValue": null,
+                        "value": "Admin User"
+                    }
+                }
+            }
+        },
+        "CreatedById": {
+            "displayValue": null,
+            "value": "005xx000001X7gzAAC"
+        },
+        "CreatedDate": {
+            "displayValue": "6/8/2020, 5:27 AM",
+            "value": "2020-06-08T12:27:58.000Z"
+        },
+        "Description": {
+            "displayValue": null,
+            "value": null
+        },
+        "LastModifiedBy": {
+            "displayValue": "Admin User",
+            "value": {
+                "apiName": "User",
+                "childRelationships": {},
+                "id": "005xx000001X7gzAAC",
+                "lastModifiedById": "005xx000001X7gzAAC",
+                "lastModifiedDate": "2020-06-03T10:44:27.000Z",
+                "recordTypeId": null,
+                "recordTypeInfo": null,
+                "systemModstamp": "2020-06-03T14:04:15.000Z",
+                "fields": {
+                    "Id": {
+                        "displayValue": null,
+                        "value": "005xx000001X7gzAAC"
+                    },
+                    "Name": {
+                        "displayValue": null,
+                        "value": "Admin User"
+                    }
+                }
+            }
+        },
+        "LastModifiedById": {
+            "displayValue": null,
+            "value": "005xx000001X7gzAAC"
+        },
+        "LastModifiedDate": {
+            "displayValue": "6/8/2020, 5:27 AM",
+            "value": "2020-06-08T12:27:58.000Z"
+        },
+        "Origin": {
+            "displayValue": "Email",
+            "value": "Email"
+        },
+        "Owner": {
+            "displayValue": "Admin User",
+            "value": {
+                "apiName": "Name",
+                "childRelationships": {},
+                "id": "005xx000001X7gzAAC",
+                "lastModifiedById": null,
+                "lastModifiedDate": null,
+                "recordTypeId": null,
+                "recordTypeInfo": null,
+                "systemModstamp": null,
+                "fields": {
+                    "Id": {
+                        "displayValue": null,
+                        "value": "005xx000001X7gzAAC"
+                    },
+                    "Name": {
+                        "displayValue": null,
+                        "value": "Admin User"
+                    }
+                }
+            }
+        },
+        "OwnerId": {
+            "displayValue": null,
+            "value": "005xx000001X7gzAAC"
+        },
+        "Priority": {
+            "displayValue": "Medium",
+            "value": "Medium"
+        },
+        "Reason": {
+            "displayValue": null,
+            "value": null
+        },
+        "Source": {
+            "displayValue": null,
+            "value": null
+        },
+        "SourceId": {
+            "displayValue": null,
+            "value": null
+        },
+        "Status": {
+            "displayValue": "New",
+            "value": "New"
+        },
+        "Subject": {
+            "displayValue": null,
+            "value": "Bonjour"
+        },
+        "SuppliedCompany": {
+            "displayValue": null,
+            "value": null
+        },
+        "SuppliedEmail": {
+            "displayValue": null,
+            "value": null
+        },
+        "SuppliedName": {
+            "displayValue": null,
+            "value": null
+        },
+        "SuppliedPhone": {
+            "displayValue": null,
+            "value": null
+        },
+        "Type": {
+            "displayValue": null,
+            "value": null
+        }
+    }
+}

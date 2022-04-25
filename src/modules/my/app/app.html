@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col">
+            <template if:false={isLoggedIn}>
+                <!-- HYPERLINK FOR WEB SERVER FLOW -->
+                <a href="/login">
+                    <lightning-button variant="brand" label="Login with Web Server Flow" class="slds-m-left_x-small"></lightning-button>
+                </a>
+            </template>
+            <template if:true={isLoggedIn}>
+                <!-- SHOW TODO LIST ONLY IF LOGGED IN -->
+                <my-todo-list onlogin={handleLogin}></my-todo-list>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,39 @@
+{
+  "Salutation": {
+    "controllerValues": {},
+    "defaultValue": null,
+    "url": "/services/data/v50.0/ui-api/object-info/Account/picklist-values/012RM000000D6EYYA0/Salutation",
+    "values": [
+      {
+        "attributes": null,
+        "label": "Mr.",
+        "validFor": [],
+        "value": "Mr."
+      },
+      {
+        "attributes": null,
+        "label": "Ms.",
+        "validFor": [],
+        "value": "Ms."
+      },
+      {
+        "attributes": null,
+        "label": "Mrs.",
+        "validFor": [],
+        "value": "Mrs."
+      },
+      {
+        "attributes": null,
+        "label": "Dr.",
+        "validFor": [],
+        "value": "Dr."
+      },
+      {
+        "attributes": null,
+        "label": "Prof.",
+        "validFor": [],
+        "value": "Prof."
+      }
+    ]
+  }
+}

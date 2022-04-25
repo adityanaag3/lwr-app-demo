@@ -1,0 +1,54 @@
+---
+examples:
+ - name: base
+   label: Navigate Using a Link
+   description: Use breadcrumbs to note the path of a record and help the user to navigate back to the parent.
+ - name: withOnclick
+   label: Navigate Using the onclick Handler
+   description: Using the onclick handler enables you to navigate programmatically using JavaScript.
+ - name: withIteration
+   label: Generate Breadcrumbs with for:each
+   description: Use for:each to iterate over a list of items to generate the breadcrumbs.
+---
+A `lightning-breadcrumbs` component is an ordered list that displays the path
+of a page and helps you navigate back to the parent. Each breadcrumb item is
+represented by a `lightning-breadcrumb` component. Breadcrumbs are actionable
+and separated by a greater-than sign.
+
+For more information, see [`lightning-breadcrumb`](bundle/lightning-breadcrumb) documentation.
+
+
+#### Component Styling
+
+`lightning-breadcrumbs` implements the
+[breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs/) blueprint in the Salesforce Lightning Design System (SLDS).
+
+To apply additional styling, use the SLDS [utility classes](https://www.lightningdesignsystem.com/utilities/alignment) with the `class` attribute.
+
+This example adds a margin around the breadcrumbs using an SLDS class.
+
+```html
+<lightning-breadcrumbs class="slds-m-around_small">
+    <lightning-breadcrumb
+        label="Parent Account"
+        href="http://example.com/parent">
+    </lightning-breadcrumb>
+    <lightning-breadcrumb
+        label="Case"
+        href="http://example.com/case">
+    </lightning-breadcrumb>
+</lightning-breadcrumbs>
+```
+
+Use SLDS styling hooks to customize the component's styles. For example, adjust the spacing before and after the greater-than sign using the `--sds-c-breadcrumbs-*` custom properties.
+
+```css
+.my-breadcrumbs {
+    --sds-c-breadcrumbs-spacing-inline-end: 20px;
+    --sds-c-breadcrumbs-spacing-inline-start: 30px;
+}
+```
+
+See [Styling Hooks Overview](https://www.lightningdesignsystem.com/components/breadcrumbs/#Styling-Hooks-Overview) for a list of CSS custom properties.
+
+For more information, see [Style Components Using Lightning Design System Styling Hooks](docs/component-library/documentation/lwc/lwc.create_components_css_custom_properties) in the Lightning Web Components Developer Guide.

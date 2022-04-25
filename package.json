@@ -1,0 +1,38 @@
+{
+  "name": "lwr-sf-data-webserver-flow-with-lds",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/copy-resources.mjs",
+    "clean": "rm -rf build && rm -rf __lwr_cache__ && rimraf nexus-packages/@salesforce-lds-default-luvio/ && rimraf nexus-packages/@salesforce-lwc-adapters-uiapi/ && rimraf nexus-packages/lwc-components-lightning/",
+    "preinstall": "tar -xzf nexus-packages/@salesforce-lds-default-luvio.tgz && tar -xzf nexus-packages/@salesforce-lwc-adapters-uiapi.tgz && tar -xzf nexus-packages/lwc-components-lightning.tgz",
+    "dev": "node src/server/server.js",
+    "start": "node src/server/server.js --mode prod",
+    "start:compat": "node src/server/server.js --mode compat",
+    "start:prod-compat": "node src/server/server.js --mode prod-compat"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "lightning-base-components": "^1.14.7-alpha",
+    "lwc": "2.13.0",
+    "lwr": "0.6.5"
+  },
+  "engines": {
+    "node": ">=14.15.4 <17"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
+  },
+  "devDependencies": {
+    "@lwrjs/auth-middleware": "^0.6.5",
+    "@salesforce-ux/design-system": "^2.17.5",
+    "cpx": "^1.5.0",
+    "node-fetch": "^3.2.3",
+    "@salesforce/lds-default-luvio": "file:nexus-packages/@salesforce-lds-default-luvio",
+    "@salesforce/lwc-adapters-uiapi": "file:nexus-packages/@salesforce-lwc-adapters-uiapi",
+    "lwc-components-lightning": "file:nexus-packages/lwc-components-lightning"
+  }
+}

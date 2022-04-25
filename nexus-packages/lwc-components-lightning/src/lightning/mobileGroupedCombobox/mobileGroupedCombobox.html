@@ -1,0 +1,115 @@
+<template>
+
+    <label class="slds-form-element__label slds-assistive-text" for="input" id="label">
+        {ariaLabel}
+    </label>
+
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+        <div class="slds-mobile-combobox" role="combobox" aria-expanded="false">
+
+            <!-- Combobox Header: Icon + Input -->
+            <div class="slds-mobile-combobox__header slds-mobile-combobox__header-has-icon">
+                <!-- Icon -->
+                <div class="slds-mobile-combobox__addon">
+                    <lightning-icon icon-name={filterIconName} alternative-text={filterIconAlternativeText}>
+                    </lightning-icon>
+                </div>
+
+                <!-- Input -->
+                <div class="slds-mobile-combobox__input" role="none">
+                    <input type="text" id="input" placeholder={placeholder} autocomplete="off"
+                        role="textbox" aria-autocomplete="list" aria-controls="listbox"
+                        class="slds-input" oninput={handleInputChange} value={inputText} />
+
+                    <!-- Text Clear Button inside Input -->
+                    <template if:true={textClear}>
+                        <button onclick={handleClickClearText}
+                            class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title={i18n.clear}>
+                            <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
+                            </svg>
+                            <span class="slds-assistive-text">{i18n.clear}</span>
+                        </button>
+                    </template>
+
+                    <!-- Search Icon inside Input -->
+                    <template if:false={textClear}>
+                        <svg class="slds-icon slds-input__icon slds-input__icon_right" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                        </svg>
+                    </template>
+
+                </div>
+            </div>
+
+            <!-- Listbox -->
+            <div id="listbox" class="slds-mobile-lookup__listbox_container" role="listbox" aria-labelledby="label">
+                <template for:each={items} for:item="item">
+
+                    <!-- Action Item (ex. Show All Results) -->
+                    <template if:true={item.action}>
+                        <button key={item.value} class="slds-button slds-button_stretch slds-mobile-lookup__listbox_trigger" data-value={item.value} onclick={handleSelected}>
+                                {item.text}
+                                
+                            <span class="slds-icon_container slds-icon-utility-search" title={i18n.search}>
+                                <lightning-primitive-icon size='x-small' icon-name={item.endIconName}></lightning-primitive-icon>
+                                <span class="slds-assistive-text">{item.endIconAlternativeText}</span>
+                            </span>
+                        </button>
+                    </template>
+
+                    <template if:true={item.items}>
+                        <ul key={item.label} class="slds-mobile-lookup__listbox" role="presentation">
+
+                            <!-- Option Heading (ex. Recent Results) -->
+                            <template if:true={item.label}>
+                                <li role="presentation" class="slds-mobile-lookup__listbox-option_heading">
+                                    <div class="slds-mobile-lookup__listbox-option slds-mobile-lookup__listbox-option_heading">
+                                        <span>{item.label}</span>
+                                    </div>
+                                </li>
+                            </template>
+
+                            <!-- Options -->
+                            <template for:each={item.items} for:item="option">
+                                <li key={option.value} role="presentation" onclick={handleSelected} data-value={option.value}>
+                                    <div class="slds-mobile-lookup__listbox-option" role="option">
+                                        <span class="slds-mobile-lookup__listbox_text_container">
+    
+                                            <!-- Option Text -->
+                                            <span class="slds-mobile-lookup__listbox_text">
+                                                <lightning-base-combobox-formatted-text text={option.text}></lightning-base-combobox-formatted-text>
+                                            </span>
+    
+                                            <!-- Option Sub-Text -->
+                                            <span class="slds-mobile-lookup__listbox_meta">
+                                                <lightning-base-combobox-formatted-text text={option.subText}></lightning-base-combobox-formatted-text>
+                                            </span>
+
+                                        </span>
+                                    </div>
+                                </li>
+                            </template>
+
+                        </ul>
+                    </template>
+
+                </template>
+
+                <!-- Loading Indicator -->
+                <template if:true={showActivityIndicator}>
+                    <div role="presentation" class="slds-mobile-lookup__listbox_loader">
+                        <div role="status" class="slds-spinner slds-spinner_x-small">
+                            <span class="slds-assistive-text">{i18n.loading}</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,6 @@
+:host {
+    display: block;
+}
+.input-rich-text-placeholder {
+    color: var(--lwc-colorTextPlaceholder);
+}

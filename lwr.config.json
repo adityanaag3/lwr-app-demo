@@ -1,0 +1,31 @@
+{
+    "lwc": { 
+        "modules": [
+            { 
+                "dir": "$rootDir/src/modules" 
+            },
+            {
+                "npm": "lightning-base-components"
+            },
+            { 
+                "npm": "@salesforce/lwc-adapters-uiapi" 
+            },
+            { 
+                "npm": "lwc-components-lightning" 
+            }
+        ] 
+    },
+    "bundleConfig": { "exclude": ["@salesforce/lds-default-luvio"] },
+    "routes": [
+        {
+            "id": "home",
+            "path": "/",
+            "rootComponent": "my/app",
+            "layoutTemplate": "$layoutsDir/index.html",
+            "bootstrap": {
+                "syntheticShadow": true,
+                "services": ["lds/setupLDS"]
+            }
+        }
+    ]
+}

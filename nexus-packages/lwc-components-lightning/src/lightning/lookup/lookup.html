@@ -1,0 +1,40 @@
+<template>
+    <template if:true={isDesktop}>
+        <lightning-lookup-desktop
+            disabled={disabled}
+            enable-create-new={_isCreateNewEnabled}
+            field-name={fieldName}
+            items={items}
+            label={label}
+            max-values={maxValues}
+            object-infos={_objectInfos}
+            pills={internalPills}
+            text-info={textInfo}
+            record={_record}
+            required={required}
+            variant={variant}
+            onentityfilterselect={handleEntityFilterSelect}
+            onlookuprecordsrequest={handleLookupRecordsRequest}
+            onpillremove={handlePillRemove}
+            onrecorditemselect={handleRecordItemSelect}
+            onreportvalidity={handleReportValidity}>
+        </lightning-lookup-desktop>
+    </template>
+    <template if:false={isDesktop}>
+        <lightning-lookup-mobile
+            disabled={disabled}
+            field-level-help={fieldLevelHelp}
+            filter-items={filterItems}
+            items={items}
+            label={label}
+            pills={internalPills}
+            text-info={textInfo}
+            required={required}
+            variant={variant}
+            onlookuprecordsrequest={handleLookupRecordsRequest}
+            onpillremove={handlePillRemove}
+            onrecorditemselect={handleRecordItemSelect}
+            onreportvalidity={handleReportValidity}>
+        </lightning-lookup-mobile>
+    </template>
+</template>

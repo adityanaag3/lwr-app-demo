@@ -1,0 +1,22 @@
+{
+    "name": "@salesforce/lds-default-luvio",
+    "version": "1.13.0",
+    "description": "rendezvous point for producers & consumers of the default luvio instance",
+    "license": "MIT",
+    "main": "dist/umd/es2018/main.js",
+    "module": "dist/es/es2018/main.js",
+    "types": "dist/types/src/main.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "prepare": "yarn build",
+        "build": "rollup --config rollup.config.js",
+        "clean": "rm -rf dist",
+        "test:unit": "jest",
+        "test:debug": "node --inspect-brk ../../node_modules/.bin/jest --runInBand"
+    },
+    "dependencies": {
+        "@luvio/engine": "0.33.0"
+    }
+}

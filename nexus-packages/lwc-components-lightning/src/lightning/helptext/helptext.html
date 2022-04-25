@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-form-element__icon">
+        <button
+            type="button"
+            class="slds-button slds-button_icon slds-button slds-button_icon"
+        >
+            <lightning-primitive-icon
+                svg-class={computedSvgClass}
+                icon-name={iconName}
+                variant="bare">
+            </lightning-primitive-icon>
+            <span class="slds-assistive-text">{alternativeText}</span>
+        </button>
+    </div>
+</template>

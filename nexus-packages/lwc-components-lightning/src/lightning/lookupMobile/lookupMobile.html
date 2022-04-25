@@ -1,0 +1,64 @@
+<template>
+    <template if:false={hasPills}>
+        <!-- faux input -->
+        <template if:false={disabled}>
+            <lightning-lookup-mobile-faux-input
+                    label={label}
+                    variant={variant}
+                    error-message={errorMessage}
+                    field-level-help={fieldLevelHelp}
+                    required={required}
+                    onblur={handleBlur}
+                    onclick={showPanel}>
+            </lightning-lookup-mobile-faux-input>
+        </template>
+
+        <!-- disabled input -->
+        <template if:true={disabled}>
+            <label class={computedLabelClass}>
+                    <template if:true={required}>
+                        <abbr class="slds-required" title={requiredLabel}>*</abbr>
+                    </template>
+                    {label}
+            </label>
+            <template if:true={fieldLevelHelp}>
+                <lightning-helptext id="input-field-help" class={computedFieldLevelHelpClass} content={fieldLevelHelp}></lightning-helptext>
+            </template>
+
+            <div class="slds-form-element__control slds-grow slds-input-has-icon slds-input-has-icon_right">
+                 <input type="text" id="lookup-mobile-disabled" disabled={disabled} class="slds-input">
+                 <lightning-primitive-icon icon-name="utility:search" variant="bare" svg-class="slds-input__icon slds-input__icon_left slds-icon-text-default"></lightning-primitive-icon>
+            </div>
+            <!-- input error message -->
+            <template if:true={errorMessage}>
+                <div id="input-help-message" class="slds-form-element__help" data-help-message role="alert">{errorMessage}</div>
+            </template>
+        </template>
+    </template>
+
+    <template if:true={hasPills}>
+        <label class={computedLabelClass} onclick={focusPillContainer}>
+            <template if:true={required}>
+                <abbr class="slds-required" title={requiredLabel}>*</abbr>
+            </template>
+            {label}
+        </label>
+
+        <template if:true={fieldLevelHelp}>
+            <lightning-helptext id="pill-container-field-help" class={computedFieldLevelHelpClass} content={fieldLevelHelp}></lightning-helptext>
+        </template>
+        <lightning-pill-container
+            aria-labelledby="pillcontainerlabel"
+            aria-describedby={computedAriaDescribedBy}
+            items={pills}
+            onblur={handleBlur}
+            onitemremove={handlePillRemove}>
+        </lightning-pill-container>
+
+        <!-- pill container error message -->
+        <template if:true={errorMessage}>
+            <div id="pill-container-help-message" class="slds-form-element__help" data-help-message role="alert">{errorMessage}</div>
+        </template>
+    </template>
+
+</template>

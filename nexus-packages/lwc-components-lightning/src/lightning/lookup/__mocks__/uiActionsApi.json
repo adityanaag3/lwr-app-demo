@@ -1,0 +1,63 @@
+{
+  "Account": {
+    "actions": {
+      "Account": {
+        "actions": [
+          {
+            "actionListContext": "Lookup",
+            "actionTarget": null,
+            "actionTargetType": "Invoke",
+            "apiName": "CreateFromLookup",
+            "externalId": "00DR0000000IEMa:Account::Lookup:Desktop:StandardButton:CreateFromLookup",
+            "iconUrl": "https://ap1.stmpa.stm.salesforce.com/img/icon/t4v35/action/new_120.png",
+            "id": "0JVR00000045802OAA",
+            "isMassAction": "false",
+            "label": "New",
+            "primaryColor": "33BCE7",
+            "relatedListRecordId": null,
+            "relatedSourceObject": null,
+            "section": "Page",
+            "sourceObject": "Account",
+            "subtype": null,
+            "targetObject": "Account",
+            "targetUrl": null,
+            "type": "StandardButton"
+          }
+        ]
+      }
+    }
+  },
+  "Contact": {
+    "actions": []
+  },
+  "EmailMessage,SocialPost": {
+    "actions": {
+      "SocialPost": {
+        "actions": [
+          {
+            "actionListContext": "Lookup",
+            "actionTarget": null,
+            "actionTargetType": "Invoke",
+            "apiName": "CreateFromLookup",
+            "externalId": "00DR0000000IEMa:SocialPost::Lookup:Desktop:StandardButton:CreateFromLookup",
+            "iconUrl": "https://ap1.stmpa.stm.salesforce.com/img/icon/t4v35/action/new_120.png",
+            "id": "0JVR00000045802OAA",
+            "isMassAction": "false",
+            "label": "New",
+            "primaryColor": "33BCE7",
+            "relatedListRecordId": null,
+            "relatedSourceObject": null,
+            "section": "Page",
+            "sourceObject": "SocialPost",
+            "subtype": null,
+            "targetObject": "SocialPost",
+            "targetUrl": null,
+            "type": "StandardButton"
+          }
+        ]
+      }
+    },
+    "eTag": "522394f787560a3c96ab99320a1b608f",
+    "url": "/services/data/v50.0/ui-api/actions/lookup/SocialPost"
+  }
+}
