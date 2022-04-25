@@ -1,0 +1,34 @@
+{
+  "name": "lwr-sf-data-jwt-flow",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/copy-resources.mjs",
+    "clean": "rm -rf __lwr_cache__",
+    "dev": "node src/server/server.js",
+    "start": "MODE=prod node src/server/server.js --mode prod",
+    "start:compat": "node src/server/server.js --mode compat",
+    "start:prod-compat": "node src/server/server.js --mode prod-compat"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "jsforce": "^1.11.0",
+    "lightning-base-components": "^1.14.7-alpha",
+    "lwc": "2.13.0",
+    "lwr": "0.6.5",
+    "salesforce-jwt-bearer-token-flow": "^0.2.4"
+  },
+  "engines": {
+    "node": ">=14.15.4 <17"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
+  },
+  "devDependencies": {
+    "@salesforce-ux/design-system": "^2.17.5",
+    "cpx": "^1.5.0"
+  }
+}
