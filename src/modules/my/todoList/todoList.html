@@ -1,0 +1,19 @@
+<template>
+    <div class="medium-padding">
+        <div class="heading"><mark>To-Do App</mark></div>
+        <div class="sub-heading">A functional to-do app that highlights the power of the Lightning Web Runtime</div>
+        <div class="addTask">
+            <input label="New Task" type="text" class="todoInput"/>
+            <button title="Primary action" class="todoButton" onclick={addTask}>Add</button>
+        </div>
+        <div class="todoList">
+            <template if:true={records}>
+                <template for:each={records} for:item="todo">
+                    <div key={todo.id} class="item">
+                        <span>{todo.name}</span>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>

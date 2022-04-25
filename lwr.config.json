@@ -1,0 +1,15 @@
+{
+    "lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
+    "routes": [
+        {
+            "id": "todoList",
+            "path": "/",
+            "rootComponent": "my/todoList"
+        },
+        {
+            "id": "about",
+            "path": "/about",
+            "contentTemplate": "$contentDir/about.md"
+        }
+    ]
+}

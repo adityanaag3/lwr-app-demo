@@ -1,0 +1,48 @@
+.medium-padding{
+    padding: 1rem;
+}
+
+.heading{
+    font-size: 1.8rem;
+}
+
+.sub-heading{
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.addTask{
+    margin-top: 15px;
+}
+
+.todoInput{
+    padding: 5px;
+}
+
+.todoButton{
+    padding: 5px;
+    margin-left: 10px;
+    width: 72px;
+}
+
+.todoList{
+    margin-top: 15px;
+}
+
+.item{
+    background: #f8f7f7;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.todoInput{
+    width: 30%;
+    display: inline-block;
+}
+
+mark{
+    display: inline-block;
+    line-height: 0em;
+    padding-bottom: 0.5em;
+}
