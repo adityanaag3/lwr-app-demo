@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col">
+            <template if:false={isLoggedIn}>
+                <!-- HYPERLINK FOR USER AGENT FLOW -->
+                <div class="slds-m-top_xx-large">
+                    <a href={loginHref}>
+                        <lightning-button variant="brand" label="Login with User-Agent OAuth Flow" class="slds-m-left_x-small"></lightning-button>
+                    </a>
+                </div>
+            </template>
+            <template if:true={isLoggedIn}>
+                <!-- SHOW TODO LIST ONLY IF LOGGED IN -->
+                <my-todo-list origin={origin} onlogin={handleLogin}></my-todo-list>
+            </template>
+        </div>
+    </div>
+</template>
